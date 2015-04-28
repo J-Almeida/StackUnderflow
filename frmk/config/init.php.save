@@ -1,17 +1,17 @@
 <?php
-  session_set_cookie_params(3600, '/~lbaw1414'); //FIXME
+  session_set_cookie_params(3600, '/~lbaw14xx'); //FIXME
   session_start();
 
   error_reporting(E_ERROR | E_WARNING); // E_NOTICE by default
 
-  $BASE_DIR = '/opt/lbaw/lbaw1414/public_html/frmk/'; //FIXME
-  $BASE_URL = '/~lbaw1414/frmk/'; //FIXME
+  $BASE_DIR = '/frmk/';
+  $BASE_URL = '/~lbaw1414/frmk/';
 
-  $conn = new PDO('pgsql:host=vdbm;dbname=lbaw1414', 'lbaw1414', 'oC366um0'); //FIXME
+  $conn = new PDO('pgsql:host=vdbm;dbname=_dbname_', '_username_', '_password_'); //FIXME
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $conn->exec('SET SCHEMA \'frmk\''); //FIXME
+  $conn->exec('SET SCHEMA \\''); //FIXME
 
   include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
   
