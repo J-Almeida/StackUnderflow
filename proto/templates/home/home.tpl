@@ -1,38 +1,5 @@
-<html>
-<head>
-  <link rel="stylesheet" href="{$BASE_URL}css/bootstrap.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-</head>
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">StackUnderflow</a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Ask a question</a></li>
-          <li><a href="#">Browse questions</a></li>
-        </ul>
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Logged in as LBAW1414</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+{include file='common/header.tpl'}
+{include file='common/navbar.tpl'}
   <div class="container">
   </div>
   <script src="{$BASE_URL}javascript/jquery-2.1.3.min.js"></script>
@@ -45,6 +12,8 @@
 
   <div class="kp-body">
       <div class="container">
+		{include file='common/login_modal.tpl'}
+		{include file='common/signup_modal.tpl'}
         <div class="row">
           <div class="col-md-4 text-center">
             <img width="100" height="100" src="{$BASE_URL}images/assets/task.png">
@@ -69,8 +38,5 @@
         <img width="50" height="50" src="{$BASE_URL}images/assets/feed.png">
       </div>
     </div>
-
-</body>
-
-</html>
+{include file='common/footer.tpl'}
 

@@ -1,2 +1,2 @@
-<a href="{$BASE_URL}actions/users/logout.php">Logout</a>
-<span class="username">{$USERNAME}</span>
+<li><a href="#">Logged in as {$USERNAME}</a></li>
+<li><a href="{$BASE_URL}actions/registered_user/logout.php">Logout</a></li>
