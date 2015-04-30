@@ -12,7 +12,7 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">Ask a question</a></li>
+          <li><a href="{$BASE_URL}pages/question/create.php">Ask a question</a></li>
           <li><a href="#">Browse questions</a></li>
         </ul>
         <form class="navbar-form navbar-left" role="search">

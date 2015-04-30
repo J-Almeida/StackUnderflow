@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-04-29 11:59:07
+<?php /* Smarty version Smarty-3.1.15, created on 2015-04-30 10:11:28
          compiled from "/opt/lbaw/lbaw1414/public_html/proto/templates/common/navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1799962114554096a1af4865-69263138%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '322a0f2bb2a955a00914a0edb40e210f8af15d6f' => 
     array (
       0 => '/opt/lbaw/lbaw1414/public_html/proto/templates/common/navbar.tpl',
-      1 => 1430298015,
+      1 => 1430381476,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_554096a1af8330_23405167',
   'variables' => 
   array (
+    'BASE_URL' => 0,
     'USERNAME' => 0,
   ),
   'has_nocache_code' => false,
@@ -37,7 +38,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">Ask a question</a></li>
+          <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/question/create.php">Ask a question</a></li>
           <li><a href="#">Browse questions</a></li>
         </ul>
         <form class="navbar-form navbar-left" role="search">
@@ -57,4 +59,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </ul>
       </div>
     </div>
-  </nav><?php }} ?>
+  </nav>
+<?php }} ?>

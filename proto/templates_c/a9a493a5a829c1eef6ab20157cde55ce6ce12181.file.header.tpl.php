@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-04-29 10:29:21
+<?php /* Smarty version Smarty-3.1.15, created on 2015-04-30 10:15:46
          compiled from "/opt/lbaw/lbaw1414/public_html/proto/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:157078024553a0c995e6a25-29066709%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a9a493a5a829c1eef6ab20157cde55ce6ce12181' => 
     array (
       0 => '/opt/lbaw/lbaw1414/public_html/proto/templates/common/header.tpl',
-      1 => 1430296154,
+      1 => 1430381739,
       2 => 'file',
     ),
   ),
@@ -30,4 +30,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 css/bootstrap.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
-<body><?php }} ?>
+
+<script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/jquery-2.1.3.min.js"></script>
+<body>
+<?php }} ?>
