@@ -1,5 +1,8 @@
 {include file='common/header.tpl'}
 {include file='common/navbar.tpl'}
+
+  <title>StackUnderflow</title>
+
   <div class="container">
   </div>
   <script src="{$BASE_URL}javascript/jquery-2.1.3.min.js"></script>
@@ -7,7 +10,7 @@
 
   <div class="jumbotron kp-info">
       <h1 class="text-center">StackUnderflow</h1>
-      <p class="text-center">Asks everything you need to know!</p>
+      <p class="text-center">Ask anything you need to know!</p>
     </div>
 
   <div class="kp-body">
