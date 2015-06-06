@@ -1,4 +1,5 @@
 <?php
+
 include_once('../../config/init.php');
 include_once($BASE_DIR .'database/question.php');
 include_once($BASE_DIR .'database/registered_user.php');
@@ -6,7 +7,8 @@ $arguments = array('content', 'title');
 
 $USERNAME = $_SESSION['username'];
 
-if(!$USERNAME) header('Location: ' . $BASE_URL);
+
+if(!$USERNAME) header('Location: ' . $BASE_URL . '?error=nosession');
 
 $valid = true;
 foreach($arguments as $argument){
@@ -22,7 +24,9 @@ $content = $_POST['content'];
 $tags = explode(',', $_POST['tags']);
 $user = getUserByUsername($USERNAME);
 
+
 $questionId = createQuestion($title, $content, $user['userid'], $tags);
+
 
 if($questionId != 0){
   header('Location: ' . $BASE_URL . 'pages/question/view.php?id=' . $questionId);

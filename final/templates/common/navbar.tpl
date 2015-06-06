@@ -1,3 +1,5 @@
+{include file='common/login_modal.tpl'}
+{include file='common/signup_modal.tpl'}
 <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -7,13 +9,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">StackUnderflow</a>
+        <a class="navbar-brand" href="{$BASE_URL}">StackUnderflow</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="{$BASE_URL}pages/question/create.php">Ask a question</a></li>
-          <li><a href="#">Browse questions</a></li>
+          <li><a href="{$BASE_URL}pages/question/list.php?page=1">Browse questions</a></li>
         </ul>
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">

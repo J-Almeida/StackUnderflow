@@ -2,8 +2,6 @@
 {include file='common/navbar.tpl'}
   <div class="container">
   </div>
-  <script src="{$BASE_URL}javascript/jquery-2.1.3.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
   <div class="jumbotron kp-info">
       <h1 class="text-center">StackUnderflow</h1>
@@ -12,8 +10,6 @@
 
   <div class="kp-body">
       <div class="container">
-		{include file='common/login_modal.tpl'}
-		{include file='common/signup_modal.tpl'}
         <div class="row">
           <div class="col-md-4 text-center">
             <img width="100" height="100" src="{$BASE_URL}images/assets/task.png">
@@ -39,4 +35,3 @@
       </div>
     </div>
 {include file='common/footer.tpl'}
-
