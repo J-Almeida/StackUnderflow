@@ -7,7 +7,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">StackUnderflow</a>
+        <a class="navbar-brand" href="{$BASE_URL}pages/home/home.php">StackUnderflow</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -22,11 +22,11 @@
           <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-			{if $USERNAME}
-				{include file='common/menu_logged_in.tpl'}
-			{else}
-				{include file='common/menu_logged_out.tpl'}
-			{/if}
+      {if $USERNAME}
+        {include file='common/menu_logged_in.tpl'}
+      {else}
+        {include file='common/menu_logged_out.tpl'}
+      {/if}
         </ul>
       </div>
     </div>
