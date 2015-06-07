@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-04-30 10:11:28
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 13:02:36
          compiled from "/opt/lbaw/lbaw1414/public_html/proto/templates/common/navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1799962114554096a1af4865-69263138%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '322a0f2bb2a955a00914a0edb40e210f8af15d6f' => 
     array (
       0 => '/opt/lbaw/lbaw1414/public_html/proto/templates/common/navbar.tpl',
-      1 => 1430381476,
+      1 => 1433587719,
       2 => 'file',
     ),
   ),
@@ -33,7 +33,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">StackUnderflow</a>
+        <a class="navbar-brand" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/home/home.php">StackUnderflow</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -49,13 +50,13 @@ pages/question/create.php">Ask a question</a></li>
           <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-			<?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
-				<?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+      <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
+        <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-			<?php } else { ?>
-				<?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+      <?php } else { ?>
+        <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-			<?php }?>
+      <?php }?>
         </ul>
       </div>
     </div>

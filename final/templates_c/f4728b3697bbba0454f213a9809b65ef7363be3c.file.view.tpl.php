@@ -1,35 +1,37 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 13:19:19
-         compiled from "/opt/lbaw/lbaw1414/public_html/proto/templates/question/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:169388770955420796947024-40738728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 13:56:54
+         compiled from "/opt/lbaw/lbaw1414/public_html/final/templates/question/view.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2125922635574135721db71-06172302%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'd0f76d9f30ef6374b11c23ca6a4fd495b280f9a6' => 
+    'f4728b3697bbba0454f213a9809b65ef7363be3c' => 
     array (
-      0 => '/opt/lbaw/lbaw1414/public_html/proto/templates/question/view.tpl',
-      1 => 1433587719,
+      0 => '/opt/lbaw/lbaw1414/public_html/final/templates/question/view.tpl',
+      1 => 1433678211,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '169388770955420796947024-40738728',
+  'nocache_hash' => '2125922635574135721db71-06172302',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_554207969f0d72_85479101',
+  'unifunc' => 'content_557413572eb0c4_64566843',
   'variables' => 
   array (
     'question' => 0,
     'tags' => 0,
     'tag' => 0,
     'createdUser' => 0,
+    'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_554207969f0d72_85479101')) {function content_554207969f0d72_85479101($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_557413572eb0c4_64566843')) {function content_557413572eb0c4_64566843($_smarty_tpl) {?>﻿<?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
+<div id="fb-root"></div>
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-1">
@@ -65,7 +67,17 @@ $_smarty_tpl->tpl_vars['tag']->_loop = true;
 </small></p>
             </div>
           </div>
+          <div id="socialRow" class="row" style="margin-left:10px">
+           <div class="fb-share-button" data-layout="button_count"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="StackUnderflow">Tweet</a>
+            <!-- Posicione esta tag onde você deseja que o botão compartilhar apareça. -->
+            <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+
+          </div>
         </li>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/question/edit_question.php?id=<?php echo $_smarty_tpl->tpl_vars['question']->value['questionid'];?>
+" class="btn btn-primary btn-xs pull-right">Edit</a>
       </ul>
     </div>
   </div>

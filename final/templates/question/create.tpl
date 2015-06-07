@@ -2,14 +2,14 @@
 {include file='common/navbar.tpl'}
 
 <link rel="stylesheet" href="{$BASE_URL}css/bootstrap-tagsinput.css">
-<script src="/lbaw/final/javascript/bootstrapValidator.min.js"></script>
+<script src="{$BASE_URL}javascript/bootstrapValidator.min.js"></script>
 
 
   <script>
 
   $(document).ready(function() {
   $('#questionForm').bootstrapValidator({
-      container: '#messages',
+      container: '#messages-create',
       feedbackIcons: {
           valid: 'glyphicon glyphicon-ok',
           invalid: 'glyphicon glyphicon-remove',
@@ -76,7 +76,7 @@
             </div>
             <div class="form-group">
               <div class="col-md-9 col-md-offset-3">
-              <div id="messages"></div>
+              <div id="messages-create"></div>
             </div>
             <div class="form-group">
               <div class="col-lg-10 col-lg-offset-2">

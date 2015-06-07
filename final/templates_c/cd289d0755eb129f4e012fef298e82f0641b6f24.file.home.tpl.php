@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 13:02:36
-         compiled from "/opt/lbaw/lbaw1414/public_html/proto/templates/home/home.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:193677498554002d0ae5f49-45741120%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 13:25:47
+         compiled from "/opt/lbaw/lbaw1414/public_html/final/templates/home/home.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1184541337557412fb790a97-02201294%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'e942c1f6a7496110145ac816021c26c85ad0be72' => 
+    'cd289d0755eb129f4e012fef298e82f0641b6f24' => 
     array (
-      0 => '/opt/lbaw/lbaw1414/public_html/proto/templates/home/home.tpl',
-      1 => 1433587719,
+      0 => '/opt/lbaw/lbaw1414/public_html/final/templates/home/home.tpl',
+      1 => 1433676336,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '193677498554002d0ae5f49-45741120',
+  'nocache_hash' => '1184541337557412fb790a97-02201294',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_554002d0b7ace2_86191243',
+  'unifunc' => 'content_557412fb84f620_16370948',
   'variables' => 
   array (
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_554002d0b7ace2_86191243')) {function content_554002d0b7ace2_86191243($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_557412fb84f620_16370948')) {function content_557412fb84f620_16370948($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -43,9 +43,9 @@ javascript/jquery-2.1.3.min.js"></script>
 
   <div class="kp-body">
       <div class="container">
-		<?php echo $_smarty_tpl->getSubTemplate ('common/login_modal.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+    <?php echo $_smarty_tpl->getSubTemplate ('common/login_modal.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-		<?php echo $_smarty_tpl->getSubTemplate ('common/signup_modal.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+    <?php echo $_smarty_tpl->getSubTemplate ('common/signup_modal.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
         <div class="row">
           <div class="col-md-4 text-center">

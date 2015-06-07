@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 13:02:36
-         compiled from "/opt/lbaw/lbaw1414/public_html/proto/templates/common/login_modal.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7433493505540ac7c5ce912-70921854%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 13:25:44
+         compiled from "/opt/lbaw/lbaw1414/public_html/final/templates/common/login_modal.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1052572938557412fb89e383-15641034%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '09536becc190f15491aa5ba3cd2d817b89428a44' => 
+    '5b9a019a49492c70b65f5e8ca2ac7ac8ce816e11' => 
     array (
-      0 => '/opt/lbaw/lbaw1414/public_html/proto/templates/common/login_modal.tpl',
-      1 => 1433587719,
+      0 => '/opt/lbaw/lbaw1414/public_html/final/templates/common/login_modal.tpl',
+      1 => 1433676336,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7433493505540ac7c5ce912-70921854',
+  'nocache_hash' => '1052572938557412fb89e383-15641034',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_5540ac7c5d2820_11327657',
+  'unifunc' => 'content_557412fb8a7881_50539001',
   'variables' => 
   array (
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5540ac7c5d2820_11327657')) {function content_5540ac7c5d2820_11327657($_smarty_tpl) {?><div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<?php if ($_valid && !is_callable('content_557412fb8a7881_50539001')) {function content_557412fb8a7881_50539001($_smarty_tpl) {?><div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

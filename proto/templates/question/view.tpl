@@ -31,10 +31,11 @@
           <div id="socialRow" class="row" style="margin-left:10px">
             <div class="fb-share-button" data-layout="button_count"></div>
             <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="StackUnderflow">Tweet</a>
-            <!-- Posicione esta tag onde vocÃª deseja que o botÃ£o compartilhar apareÃ§a. -->
+            <!-- Posicione esta tag onde você deseja que o botão compartilhar apareça. -->
             <div class="g-plus" data-action="share" data-annotation="bubble"></div>
           </div>
         </li>
+        <a href="{$BASE_URL}pages/question/edit_question.php?id={$question.questionid}" class="btn btn-primary btn-xs pull-right">Edit</a>
       </ul>
     </div>
   </div>

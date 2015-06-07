@@ -1,6 +1,6 @@
 <!-- <script src="{$BASE_URL}javascript/jquery.validate.min.js"></script> -->
 <!-- <script src="/lbaw/final/javascript/jquery.validate.min.js"></script> -->
-<script src="/lbaw/final/javascript/bootstrapValidator.min.js"></script>
+<script src="{$BASE_URL}javascript/bootstrapValidator.min.js"></script>
 
 <!-- Validator Antigo
 
