@@ -17,6 +17,7 @@
         <div class="row">
           <div class="col-md-4 text-center">
             <img width="100" height="100" src="{$BASE_URL}images/assets/task.png">
+            <p>Just ask a question and whait for the help of our network. </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet augue a elit euismod malesuada. Duis ornare nisl nec purus tempor interdum id et dui. Aenean dapibus fermentum ligula, non posuere justo cursus nec. Etiam mollis bibendum felis, nec scelerisque arcu lacinia sed</p>
           </div>
           <div class="col-md-4 text-center">
@@ -39,4 +40,3 @@
       </div>
     </div>
 {include file='common/footer.tpl'}
-
