@@ -4,65 +4,6 @@
 
 <!-- Validator Antigo
 
-<script>
-	$.validator.setDefaults({
-		submitHandler: function() {
-			alert("submitted!");
-		}
-	});
-
-	$().ready(function() {
-		// validate signup form on keyup and submit
-		$("#signupForm").validate({
-			rules: {
-				firstname: "required",
-				lastname: "required",
-				username: {
-					required: true,
-					minlength: 2
-				},
-				company: {
-					required: false
-				},
-				email: {
-					required: true,
-					email: true
-				},
-				password: {
-					required: true,
-					minlength: 5
-				},
-				confirm_password: {
-					required: true,
-					minlength: 5,
-					equalTo: "#password"
-				}
-			},
-			messages: {
-				firstname: "Please enter your first name",
-				lastname: "Please enter your last name",
-				username: {
-					required: "Please enter a username",
-					minlength: "Your username must consist of at least 2 characters"
-				},
-				password: {
-					required: "Please provide a password",
-					minlength: "Your password must be at least 5 characters long"
-				},
-				confirm_password: {
-					required: "Please provide a password",
-					minlength: "Your password must be at least 5 characters long",
-					equalTo: "Please enter the same password as above"
-				},
-				email: "Please enter a valid email address"			},
-
-			errorPlacement: function(error, element) {
-				// document.getElementById(element).style.borderColor = "red";
-				$(element.parent()).addClass('has-error');
-			},
-			success: 
-
-		});
 
 		// propose username by combining first- and lastname
 		$("#username").focus(function() {
@@ -72,91 +13,99 @@
 				this.value = firstname + "." + lastname;
 			}
 		});
-	});
-</script>
 
 -->
 
 
 <script>
 
-$(document).ready(function() {
-$('#signupForm').bootstrapValidator({
-    container: '#messages',
-    feedbackIcons: {
-        valid: 'glyphicon glyphicon-ok',
-        invalid: 'glyphicon glyphicon-remove',
-        validating: 'glyphicon glyphicon-refresh'
-    },
+	$(document).ready(function() {
+	$('#signupForm').bootstrapValidator({
+	    container: '#messages',
+	    feedbackIcons: {
+	        valid: 'glyphicon glyphicon-ok',
+	        invalid: 'glyphicon glyphicon-remove',
+	        validating: 'glyphicon glyphicon-refresh'
+	    },
 
-    fields: {
-        name: {
-            validators: {
-                notEmpty: {
-                    message: 'The first name is required and cannot be empty'
-                }
-            }
-        },
-        surname: {
-            validators: {
-                notEmpty: {
-                    message: 'The last name is required and cannot be empty'
-                }
-            }
-        },
-        username: {
-            validators: {
-            	stringLength: {
-                	min: 5,
-                    max: 20,
-                    message: 'The username must be 3 to 20 characters long'
-                },
-                notEmpty: {
-                    message: 'The last name is required and cannot be empty'
-                }
-            }
-        },
-        email: {
-            validators: {
-                notEmpty: {
-                    message: 'The email address is required and cannot be empty'
-                },
-                emailAddress: {
-                    message: 'The email address is not valid'
-                }
-            }
-        },
-        password: {
-            validators: {
-                notEmpty: {
-                    message: 'The password is required and cannot be empty'
-                },
-                stringLength: {
-                	min: 5,
-                    max: 20,
-                    message: 'The password must be 5 to 20 characters long'
-                }
-            }
-        },
-        confirm_password: {
-            validators: {
-                notEmpty: {
-                    message: 'The content is required and cannot be empty'
-                },
-                identical: {
-                    field: 'password',
-                    message: 'The password and its confirmation do not match'
-                },
-                stringLength: {
-                    max: 500,
-                    message: 'The content must be less than 500 characters long'
-                }
-            }
-        }
+	    fields: {
+	        name: {
+	            validators: {
+					stringLength: {
+	                	min: 2,
+	                    max: 100,
+	                    message: 'The first name must be 2 to 100 characters long'
+	                },
+	                notEmpty: {
+	                    message: 'The first name is required and cannot be empty'
+	                }
+	            }
+	        },
+	        surname: {
+	            validators: {
+					stringLength: {
+	                	min: 2,
+	                    max: 100,
+	                    message: 'The username must be 2 to 100 characters long'
+	                },
+	                notEmpty: {
+	                    message: 'The last name is required and cannot be empty'
+	                }
+	            }
+	        },
+	        username: {
+	            validators: {
+	            	stringLength: {
+	                	min: 3,
+	                    max: 25,
+	                    message: 'The username must be 3 to 25 characters long'
+	                },
+	                notEmpty: {
+	                    message: 'The last name is required and cannot be empty'
+	                }
+	            }
+	        },
+	        email: {
+	            validators: {
+	                notEmpty: {
+	                    message: 'The email address is required and cannot be empty'
+	                },
+	                emailAddress: {
+	                    message: 'The email address is not valid'
+	                }
+	            }
+	        },
+	        password: {
+	            validators: {
+	                notEmpty: {
+	                    message: 'The password is required and cannot be empty'
+	                },
+	                stringLength: {
+	                	min: 5,
+	                    max: 20,
+	                    message: 'The password must be 5 to 20 characters long'
+	                }
+	            }
+	        },
+	        confirm_password: {
+	            validators: {
+	                notEmpty: {
+	                    message: 'The content is required and cannot be empty'
+	                },
+	                identical: {
+	                    field: 'password',
+	                    message: 'The password and its confirmation do not match'
+	                },
+	                stringLength: {
+	                    max: 500,
+	                    message: 'The content must be less than 500 characters long'
+	                }
+	            }
+	        }
 
-    }
-});
-});
+	    }
+	});
+	});
 
 </script>
 	
