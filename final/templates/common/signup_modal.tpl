@@ -1,5 +1,8 @@
 <!-- <script src="{$BASE_URL}javascript/jquery.validate.min.js"></script> -->
-<script src="/lbaw/final/javascript/jquery.validate.min.js"></script>
+<!-- <script src="/lbaw/final/javascript/jquery.validate.min.js"></script> -->
+<script src="/lbaw/final/javascript/bootstrapValidator.min.js"></script>
+
+<!-- Validator Antigo
 
 <script>
 	$.validator.setDefaults({
@@ -52,9 +55,13 @@
 					equalTo: "Please enter the same password as above"
 				},
 				email: "Please enter a valid email address"			},
+
 			errorPlacement: function(error, element) {
-				document.getElementById('password').style.borderColor = "red";
-			}
+				// document.getElementById(element).style.borderColor = "red";
+				$(element.parent()).addClass('has-error');
+			},
+			success: 
+
 		});
 
 		// propose username by combining first- and lastname
@@ -66,6 +73,91 @@
 			}
 		});
 	});
+</script>
+
+-->
+
+
+<script>
+
+$(document).ready(function() {
+$('#signupForm').bootstrapValidator({
+    container: '#messages',
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+    },
+
+    fields: {
+        name: {
+            validators: {
+                notEmpty: {
+                    message: 'The first name is required and cannot be empty'
+                }
+            }
+        },
+        surname: {
+            validators: {
+                notEmpty: {
+                    message: 'The last name is required and cannot be empty'
+                }
+            }
+        },
+        username: {
+            validators: {
+            	stringLength: {
+                	min: 5,
+                    max: 20,
+                    message: 'The username must be 3 to 20 characters long'
+                },
+                notEmpty: {
+                    message: 'The last name is required and cannot be empty'
+                }
+            }
+        },
+        email: {
+            validators: {
+                notEmpty: {
+                    message: 'The email address is required and cannot be empty'
+                },
+                emailAddress: {
+                    message: 'The email address is not valid'
+                }
+            }
+        },
+        password: {
+            validators: {
+                notEmpty: {
+                    message: 'The password is required and cannot be empty'
+                },
+                stringLength: {
+                	min: 5,
+                    max: 20,
+                    message: 'The password must be 5 to 20 characters long'
+                }
+            }
+        },
+        confirm_password: {
+            validators: {
+                notEmpty: {
+                    message: 'The content is required and cannot be empty'
+                },
+                identical: {
+                    field: 'password',
+                    message: 'The password and its confirmation do not match'
+                },
+                stringLength: {
+                    max: 500,
+                    message: 'The content must be less than 500 characters long'
+                }
+            }
+        }
+
+    }
+});
+});
+
 </script>
 	
 
@@ -123,6 +215,10 @@
 								<input class="form-control" name="confirm_password" type="password" id="confirm_password">
 							</div>
 						</div>
+					    <div class="form-group">
+				        	<div class="col-md-9 col-md-offset-3">
+				            <div id="messages"></div>
+				        </div>
 					</fieldset>
 				</div>
 				<div class="modal-footer">
