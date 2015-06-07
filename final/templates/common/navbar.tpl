@@ -24,11 +24,11 @@
           <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-      {if $USERNAME}
-        {include file='common/menu_logged_in.tpl'}
-      {else}
-        {include file='common/menu_logged_out.tpl'}
-      {/if}
+			{if $USERNAME}
+				{include file='common/menu_logged_in.tpl'}
+			{else}
+				{include file='common/menu_logged_out.tpl'}
+			{/if}
         </ul>
       </div>
     </div>

@@ -23,10 +23,10 @@
           {foreach $questions as $question}
           <tr>
             <td><a href="{$BASE_URL}pages/question/view.php?id={$question.questionid}">{$question.questionid}<a></td>
-            <td>1</td>
-            <td>{$question.content}</td>
+            <td>{$question.rating}</td>
+            <td>{$question.title}</td>
             <td>0</td>
-            <td>{$question.createdby}</td>
+            <td>{$question.authorname}</td>
           </tr>
           {/foreach}
         </tbody>
