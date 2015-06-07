@@ -1,6 +1,5 @@
 {include file='common/header.tpl'}
 {include file='common/navbar.tpl'}
-<div id="fb-root"></div>
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-1">
@@ -12,29 +11,24 @@
     </div>
     <div class="col-lg-6">
       <ul class="list-group">
-        <li class="list-group-item">
-          <h3 class="list-group-item-heading">{$question.title}</h3>
+        <div >Title</div>
+          <input class="form-control" name="name" value="{$question.title}" type="text">
           <hr/>
-          <p class="list-group-item-text">{$question.content}</p>
+          <div >Details</div>
+          <input class="form-control" name="name" value="{$question.content}" type="text">
           <hr/>
           <div class="row">
             <div class="col-lg-8">
               <span class="text-muted">Tags: </span>
               {foreach $tags as $tag}
-              <span class="label label-info">{$tag['name']}</span>
+                <span class="label label-info">{$tag['name']}</span>
               {/foreach}
             </div>
             <div class="col-lg-4">
               <p class="list-group-item-text text-muted pull-right"><small>Submitted by: {$createdUser.username}</small></p>
             </div>
           </div>
-          <div id="socialRow" class="row" style="margin-left:10px">
-            <div class="fb-share-button" data-layout="button_count"></div>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="StackUnderflow">Tweet</a>
-            <!-- Posicione esta tag onde você deseja que o botão compartilhar apareça. -->
-            <div class="g-plus" data-action="share" data-annotation="bubble"></div>
-          </div>
-        </li>
+        <button href="#" type="button" class="pull-right" >Submit</button>
       </ul>
     </div>
   </div>

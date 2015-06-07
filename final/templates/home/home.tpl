@@ -15,8 +15,8 @@
 
   <div class="kp-body">
       <div class="container">
-		{include file='common/login_modal.tpl'}
-		{include file='common/signup_modal.tpl'}
+    {include file='common/login_modal.tpl'}
+    {include file='common/signup_modal.tpl'}
         <div class="row">
           <div class="col-md-4 text-center">
             <img width="100" height="100" src="{$BASE_URL}images/assets/questionmark.png">

@@ -51,4 +51,18 @@ function getQuestionTagsById($id){
   $stmt->execute(array($id));
   return $stmt->fetchAll();
 }
+
+function listQuestions($page){
+  global $conn;
+  $stmt = $conn->prepare('SELECT * FROM question LIMIT ? OFFSET ?');
+  $stmt->execute(array(15, 15 * ($page - 1)));
+  return $stmt->fetchAll();
+}
+
+function getNumberOfQuestions(){
+  global $conn;
+  $stmt = $conn->prepare('SELECT COUNT(*) FROM question');
+  $stmt->execute();
+  return $stmt->fetchAll();
+}
 ?>

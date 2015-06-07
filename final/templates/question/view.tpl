@@ -28,6 +28,7 @@
             </div>
           </div>
         </li>
+        <a href="{$BASE_URL}pages/question/edit_question.php?id={$question.questionid}" class="btn btn-primary btn-xs pull-right">Edit</a>
       </ul>
     </div>
   </div>
