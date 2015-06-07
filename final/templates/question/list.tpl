@@ -5,7 +5,7 @@
   </div class="row">
     <div class="col-lg-12">
       <div class="btn-group-vertical pull-right">
-        <a href="#" class="btn btn-default">+</a>
+        <a href="{$BASE_URL}pages/question/create.php" class="btn btn-default">+</a>
       </div>
     </div>
     <div class="col-lg-12">
