@@ -11,7 +11,7 @@
     <div class="col-lg-12">
       <table class="table table-striped table-hover">
         <thead>
-          <tr>
+          <tr >
             <th>ID</th>
             <th>Rating</th>
             <th>Question</th>
@@ -21,12 +21,12 @@
         </thead>
         <tbody>
           {foreach $questions as $question}
-          <tr>
-            <td><a href="{$BASE_URL}pages/question/view.php?id={$question.questionid}">{$question.questionid}<a></td>
+          <tr onclick="document.location = '{$BASE_URL}pages/question/view.php?id={$question.questionid}';">
+            <td>{$question.questionid}</td>
             <td>{$question.rating}</td>
             <td>{$question.title}</td>
             <td>0</td>
-            <td>{$question.authorname}</td>
+            <td><a href="{$BASE_URL}pages/registered_user/own_profile.php">{$question.authorname}<a></td>
           </tr>
           {/foreach}
         </tbody>
