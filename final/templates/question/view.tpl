@@ -38,12 +38,11 @@
               <p class="list-group-item-text text-muted pull-right"><small>Submitted by: {$createdUser.username}</small></p>
             </div>
           </div>
+          <hr/>
           <div id="socialRow" class="row" style="margin-left:10px">
-           <div class="fb-share-button" data-layout="button_count"></div>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="StackUnderflow" data-dnt="true">Tweet</a>
-            
-            <div class="g-plus" data-action="share" data-annotation="bubble"></div>
-
+            <div id="sharefacebook" class="fb-share-button" data-layout="button_count"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="StackUnderflow" data-dnt="true"><img src='http://s1.postimg.org/ae4co9323/tweet.png' border='0' alt="tweet" height='27px'/></a>
+            <div class="g-plus" data-action="share" data-annotation="bubble" style="margin-top: 5px"></div>
           </div>
         </li>
         <a href="{$BASE_URL}pages/question/edit_question.php?id={$question.questionid}" class="btn btn-primary btn-xs pull-right">Edit</a>
@@ -105,7 +104,7 @@
       </ul>
     </div>
   </div>
-  
+
 <div id="answer-template" style="display: none">
   <div class="row">
       <div class="col-lg-1">
