@@ -65,10 +65,46 @@ function listQuestions($page){
   return $stmt->fetchAll();
 }
 
-function getNumberOfQuestions(){
+
+function listQuestions($page, $tag){
   global $conn;
-  $stmt = $conn->prepare('SELECT COUNT(*) FROM question');
-  $stmt->execute();
+  $stmt = $conn->prepare(
+  'SELECT 
+  question.questionid, 
+  question_rating.rating, 
+  question.title, 
+  question.createdby
+FROM 
+  public.question, 
+  public.question_tag, 
+  public.tag, 
+  public.question_rating
+WHERE 
+  question.questionid = question_tag.questionid AND
+  question_tag.tagid = tag.tagid AND
+  question_rating.question = question.questionid AND
+  tag.name ILIKE 'print'
+ORDER BY
+  question.questionid DESC;');
+  $stmt->execute(array(15, 15 * ($page - 1)));
   return $stmt->fetchAll();
 }
-?>
+
+
+#'SELECT * FROM question
+#JOIN question_tag ON question_tag.questionid = question.questionid
+#JOIN tag on tag.tagid = question_tag.tagid' // questions com as tags
+
+ /* substitui isto por 'question' na query original:
+'SELECT tag.tagid as tagid from tag where tag.name = $tag' // tags com o nome dado
+'SELECT question_tag.questionid as questionid from question_tag where question_tag.tagid = (tags com o nome dado)' // id das perguntas com a tag
+'SELECT question from question where question.questionid = (id das pergutas resultantes da query anterior)'
+
+query original:
+'SELECT question_with_ratings.*, registered_user.username AS authorname FROM 
+      (SELECT question.questionid, question.title, question.content, question.createdby AS authorid, COALESCE(SUM(rating), 0) AS rating 
+        FROM question, question_rating WHERE
+        question.questionid = question_rating.question GROUP BY(question.questionid) ORDER BY (question.questionid) LIMIT ? OFFSET ?)
+                        AS question_with_ratings, registered_user
+                        WHERE question_with_ratings.authorid = registered_user.userid ORDER BY (question_with_ratings.questionid)');
+  */
