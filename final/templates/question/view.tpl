@@ -8,6 +8,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-1">
+     <div class="pull-right">
       {if $loggedIn}
       <div><button id="upvote-button"class="btn btn-success btn-sm {if $userRating > 0} disabled {/if}"><i class="fa fa-chevron-up"></i></button></div>
       <span id="rating-value" class="{if $rating > 0}text-success{else}text-danger{/if}"><strong>{$rating}</strong></span>
@@ -17,7 +18,6 @@
       <span id="rating-value" class="{if $rating > 0}text-success{else}text-danger{/if}"><strong>{$rating}</strong></span>
       <div><button class="btn btn-danger btn-sm disabled"><i class="fa fa-chevron-down"></i></button></div>
       {/if}
-      <div class="pull-right">
       </div>
     </div>
     <div class="col-lg-6">
@@ -50,6 +50,64 @@
       </ul>
     </div>
   </div>
+  {foreach $answers as $answer}
+  <div class="row">
+      <div class="col-lg-1">
+        <div class="pull-right">
+          {if $loggedIn}
+          <div><button id="upvote-button"class="btn btn-success btn-sm {if $userRating > 0} disabled {/if}"><i class="fa fa-chevron-up"></i></button></div>
+          <span id="rating-value" class="{if $rating > 0}text-success{else}text-danger{/if}"><strong>{$answer.rating}</strong></span>
+          <div><button id="downvote-button"class="btn btn-danger btn-sm {if $userRating < 0} disabled {/if}"><i class="fa fa-chevron-down"></i></button></div>
+          {else}
+          <div><button class="btn btn-success btn-sm disabled"><i class="fa fa-chevron-up"></i></button></div>
+          <span id="rating-value" class="{if $rating > 0}text-success{else}text-danger{/if}"><strong>{$answer.rating}</strong></span>
+          <div><button class="btn btn-danger btn-sm disabled"><i class="fa fa-chevron-down"></i></button></div>
+          {/if}
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <p class="list-group-item-text">{$answer.content}</p>
+            <hr/>
+            <div class="row">
+              <div class="col-lg-8">
+              </div>
+              <div class="col-lg-4">
+                <p class="list-group-item-text text-muted pull-right"><small>Submitted by: {$answer.authorname}</small></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" class="form-control" placeholder="add a comment" style="border: none"></input>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  {/foreach}
+  <div class="row">
+    <div class="col-lg-1">
+    </div>
+    <div class="col-lg-6">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <textarea id="answer-content" class="form-control"></textarea>
+          <button id="answer-button" class="btn btn-success">Submit answer</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  
+
 </div> <!-- end container-->
-<script type="text/javascript" src="{$BASE_URL}javascript/create-question.js"></script>
+<script type="text/javascript" src="{$BASE_URL}javascript/view-question.js"></script>
 {include file='common/footer.tpl'}
