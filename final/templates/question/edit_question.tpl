@@ -21,14 +21,14 @@
             <div class="col-lg-8">
               <span class="text-muted">Tags: </span>
               {foreach $tags as $tag}
-                <span class="label label-info">{$tag['name']}</span>
+              <input class="label-info form-control" name="name" value="{$tag['name']}" type="text">
               {/foreach}
             </div>
             <div class="col-lg-4">
               <p class="list-group-item-text text-muted pull-right"><small>Submitted by: {$createdUser.username}</small></p>
             </div>
           </div>
-        <button href="#" type="button" class="pull-right" >Submit</button>
+          <a href="{$BASE_URL}pages/question/view.php?id={$question.questionid}" class="btn btn-primary btn-xs pull-right">Submit</a>
       </ul>
     </div>
   </div>
