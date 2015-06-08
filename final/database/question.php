@@ -66,7 +66,9 @@ function listQuestions($page){
 }
 
 
-function listQuestions($page, $tag){
+
+function listQuestions_tags($page, $tag){
+  $tempTagText = "'print'";
   global $conn;
   $stmt = $conn->prepare(
   'SELECT 
@@ -83,8 +85,8 @@ WHERE
   question.questionid = question_tag.questionid AND
   question_tag.tagid = tag.tagid AND
   question_rating.question = question.questionid AND
-  tag.name ILIKE 'print'
-ORDER BY
+  tag.name ILIKE '.$tempTagText.
+' ORDER BY
   question.questionid DESC;');
   $stmt->execute(array(15, 15 * ($page - 1)));
   return $stmt->fetchAll();
