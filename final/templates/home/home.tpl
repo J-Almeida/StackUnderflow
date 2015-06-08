@@ -19,15 +19,15 @@
         <div class="row">
           <div class="col-md-4 text-center">
             <img width="100" height="100" src="{$BASE_URL}images/assets/questionmark.png">
-            <p>Ask if you need help</p>
+            <p class="pictureDescription">Ask if you need help</p>
           </div>
           <div class="col-md-4 text-center">
             <img width="100" height="100" src="{$BASE_URL}images/assets/magnifyingglass.png">
-            <p>Find questions that interest you, and help other users</p>
+            <p class="pictureDescription">Find questions that interest you, and help other users</p>
           </div>
           <div class="col-md-4 text-center">
             <img width="100" height="100" src="{$BASE_URL}images/assets/chat.png">
-            <p>Comment on questions and answers</p>
+            <p class="pictureDescription">Comment on questions and answers</p>
           </div>
         </div>
       </div>
