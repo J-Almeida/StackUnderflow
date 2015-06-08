@@ -3,11 +3,17 @@
 
 <div class="container-fluid">
   </div class="row">
-    <div class="col-lg-12">
-      <div class="btn-group-vertical pull-right">
-        <a href="{$BASE_URL}pages/question/create.php" class="btn btn-default">+</a>
-      </div>
-    </div>
+
+    {if $USERNAME}
+      {literal}
+        <div class="col-lg-12">
+          <div class="btn-group-vertical pull-right">
+            <a href="http://gnomo.fe.up.pt/~lbaw1414/final/pages/question/create.php" class="btn btn-default">+</a>
+          </div>
+        </div>
+      {/literal}
+    {/if}
+
     <div class="col-lg-12">
       <table class="table table-striped table-hover">
         <thead>
