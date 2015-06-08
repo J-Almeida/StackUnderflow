@@ -55,12 +55,12 @@
       <div class="col-lg-1">
         <div class="pull-right">
           {if $loggedIn}
-          <div><button id="upvote-button"class="btn btn-success btn-sm {if $userRating > 0} disabled {/if}"><i class="fa fa-chevron-up"></i></button></div>
-          <span id="rating-value" class="{if $rating > 0}text-success{else}text-danger{/if}"><strong>{$answer.rating}</strong></span>
-          <div><button id="downvote-button"class="btn btn-danger btn-sm {if $userRating < 0} disabled {/if}"><i class="fa fa-chevron-down"></i></button></div>
+          <div><button data-id="{$answer.answerid}" class="answer-upvote btn btn-success btn-sm {if $answer.userRating > 0} disabled {/if}"><i class="fa fa-chevron-up"></i></button></div>
+          <span class="answer-rating {if $answer.userRating > 0}text-success{else}text-danger{/if}"><strong>{$answer.rating}</strong></span>
+          <div><button data-id="{$answer.answerid}" class="answer-downvote btn btn-danger btn-sm {if $answer.userRating < 0} disabled {/if}"><i class="fa fa-chevron-down"></i></button></div>
           {else}
           <div><button class="btn btn-success btn-sm disabled"><i class="fa fa-chevron-up"></i></button></div>
-          <span id="rating-value" class="{if $rating > 0}text-success{else}text-danger{/if}"><strong>{$answer.rating}</strong></span>
+          <span class="answer-rating {if $rating > 0}text-success{else}text-danger{/if}"><strong>{$answer.rating}</strong></span>
           <div><button class="btn btn-danger btn-sm disabled"><i class="fa fa-chevron-down"></i></button></div>
           {/if}
         </div>

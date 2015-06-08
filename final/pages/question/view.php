@@ -3,6 +3,7 @@ include_once('../../config/init.php');
 include_once($BASE_DIR .'database/question.php');
 include_once($BASE_DIR .'database/registered_user.php');
 include_once($BASE_DIR .'database/question_rating.php');
+include_once($BASE_DIR .'database/answer_rating.php');
 include_once($BASE_DIR .'database/answer.php');
 
 $questionId = $_GET['id'];
@@ -22,6 +23,15 @@ if(!$questionId){
   $loggedUserRating = getQuestionRating($questionId, $loggedUser['userid'])['rating'];
 
   if(!$loggedUserRating) $loggedUserRating = 0;
+
+  if(isset($loggedUser)){
+    foreach ($answers as $key => $answer) {
+      $userRating = getAnswerRating($answer['answerid'], $loggedUser['userid'])['rating'];
+      if(!$userRating) $userRating = 0;
+      $answers[$key]['userRating'] = $userRating;
+    }
+  }
+
   $smarty->assign('loggedIn', isset($USERNAME));
   $smarty->assign('userRating', $loggedUserRating);
   $smarty->assign('rating', $rating);

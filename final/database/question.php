@@ -59,8 +59,8 @@ function listQuestions($page){
       (SELECT question.questionid, question.title, question.content, question.createdby AS authorid, COALESCE(SUM(rating), 0) AS rating 
         FROM question, question_rating WHERE
         question.questionid = question_rating.question GROUP BY(question.questionid) ORDER BY (question.questionid) LIMIT ? OFFSET ?)
-      AS question_with_ratings, registered_user
-      WHERE question_with_ratings.authorid = registered_user.userid ORDER BY (question_with_ratings.questionid)');
+                        AS question_with_ratings, registered_user
+                        WHERE question_with_ratings.authorid = registered_user.userid ORDER BY (question_with_ratings.questionid)');
   $stmt->execute(array(15, 15 * ($page - 1)));
   return $stmt->fetchAll();
 }

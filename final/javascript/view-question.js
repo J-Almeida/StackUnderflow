@@ -14,6 +14,35 @@ $(document).ready(function(){
 		});
 	};
 
+	function rateAnswer(answer, upvote, button){
+		var container = $(button.parent().parent());
+		container.find('.answer-upvote').removeClass('disabled');
+		container.find('.answer-downvote').removeClass('disabled');
+		if(upvote){
+			container.find('.answer-upvote').addClass('disabled');
+		}else container.find('.answer-downvote').addClass('disabled');
+
+		$.ajax({
+			url: BASE_URL + 'api/answer_ratings/create.php',
+			data: {
+				answer: answer,
+				upvote: upvote
+			}, success: function(data){
+				container.find('.answer-rating').removeClass('text-danger');
+				container.find('.answer-rating').removeClass('text-success');
+				var totalRating = JSON.parse(data)['rating'];
+
+				container.find('.answer-rating strong').text(totalRating);
+				
+				if(totalRating > 0){
+					container.find('.answer-rating').addClass('text-success');
+				}else{
+					container.find('.answer-rating').addClass('text-danger');
+				}
+			}
+		});
+	}
+
 	function rate(upvote){
 		$('#upvote-button').removeClass('disabled');
 		$('#downvote-button').removeClass('disabled');
@@ -56,5 +85,13 @@ $(document).ready(function(){
 	$(document).on('click', '#answer-button', function(event){
 		submitAnswer($('#answer-content').val());
 
+	});
+
+	$(document).on('click', '.answer-upvote', function(event){
+
+		rateAnswer($(this).data('id'), true, $(this));
+	});
+	$(document).on('click', '.answer-downvote', function(event){
+		rateAnswer($(this).data('id'), false, $(this));
 	});
 });
