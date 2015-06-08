@@ -10,6 +10,13 @@ $(document).ready(function(){
 			},
 			success: function(data){
 				console.log(data);
+				var answerTemplate = $($('#answer-template').children()[0]).clone();
+				answerTemplate.find('.answer-content').text(data['content']);
+				answerTemplate.find('.answer-submitter').text(data['authorname']);
+				answerTemplate.find('.answer-upvote').attr("data-id", data['answerid']);
+				answerTemplate.find('.answer-downvote').attr("data-id", data['answerid']);
+				console.log(answerTemplate);
+				$("#answer-form").before(answerTemplate);
 			}
 		});
 	};
@@ -33,7 +40,7 @@ $(document).ready(function(){
 				var totalRating = JSON.parse(data)['rating'];
 
 				container.find('.answer-rating strong').text(totalRating);
-				
+
 				if(totalRating > 0){
 					container.find('.answer-rating').addClass('text-success');
 				}else{

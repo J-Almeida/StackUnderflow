@@ -91,9 +91,9 @@
           </tbody>
         </table>
       </div>
-    </div>
+  </div>
   {/foreach}
-  <div class="row">
+  <div class="row" id="answer-form">
     <div class="col-lg-1">
     </div>
     <div class="col-lg-6">
@@ -106,7 +106,49 @@
     </div>
   </div>
   
-  
+<div id="answer-template" style="display: none">
+  <div class="row">
+      <div class="col-lg-1">
+        <div class="pull-right">
+          {if $loggedIn}
+          <div><button data-id="" class="answer-upvote btn btn-success btn-sm disabled"><i class="fa fa-chevron-up"></i></button></div>
+          <span class="answer-rating text-success"><strong>1</strong></span>
+          <div><button data-id="" class="answer-downvote btn btn-danger btn-sm"><i class="fa fa-chevron-down"></i></button></div>
+          {else}
+          <div><button class="btn btn-success btn-sm disabled"><i class="fa fa-chevron-up"></i></button></div>
+          <span class="answer-rating text-success"><strong>1</strong></span>
+          <div><button class="btn btn-danger btn-sm disabled"><i class="fa fa-chevron-down"></i></button></div>
+          {/if}
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <p class="list-group-item-text answer-content"></p>
+            <hr/>
+            <div class="row">
+              <div class="col-lg-8">
+              </div>
+              <div class="col-lg-4">
+                <p class="list-group-item-text text-muted pull-right"><small>Submitted by: <span class="answer-submitter"></span></small></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" class="form-control" placeholder="add a comment" style="border: none"></input>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
 
 </div> <!-- end container-->
 <script type="text/javascript" src="{$BASE_URL}javascript/view-question.js"></script>
