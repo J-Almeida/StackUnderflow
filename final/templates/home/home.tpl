@@ -33,6 +33,7 @@
       </div>
     </div>
 
+    <!--
     <div class="kp-header">
       <div class="text-center">
         <img width="50" height="50" src="{$BASE_URL}images/assets/facebook.png">
@@ -40,5 +41,14 @@
         <img width="50" height="50" src="{$BASE_URL}images/assets/feed.png">
       </div>
     </div>
+    -->
+
+    <div class="tip">
+      <div class="text-center navbar-fixed-bottom">
+        <p class="text-info">Tip: log in to post questions!</p> <!-- TODO - dar alguma margem até ao fundo da página -->
+      </div>
+    </div>
+
+
 {include file='common/footer.tpl'}
 
